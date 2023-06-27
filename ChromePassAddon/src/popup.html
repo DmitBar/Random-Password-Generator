@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"/> 
+        <link href="css/theme.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="style.css"/> 
+        <title>popup</title>         
+        <script src="popup.js" defer></script>         
+        <script>/* Pinegrow Interactions, do not remove */ (function(){try{if(!document.documentElement.hasAttribute('data-pg-ia-disabled')) { window.pgia_small_mq=typeof pgia_small_mq=='string'?pgia_small_mq:'(max-width:767px)';window.pgia_large_mq=typeof pgia_large_mq=='string'?pgia_large_mq:'(min-width:768px)';var style = document.createElement('style');var pgcss='html:not(.pg-ia-no-preview) [data-pg-ia-hide=""] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show=""] {opacity:1;visibility:visible;display:block;}';if(document.documentElement.hasAttribute('data-pg-id') && document.documentElement.hasAttribute('data-pg-mobile')) {pgia_small_mq='(min-width:0)';pgia_large_mq='(min-width:99999px)'} pgcss+='@media ' + pgia_small_mq + '{ html:not(.pg-ia-no-preview) [data-pg-ia-hide="mobile"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="mobile"] {opacity:1;visibility:visible;display:block;}}';pgcss+='@media ' + pgia_large_mq + '{html:not(.pg-ia-no-preview) [data-pg-ia-hide="desktop"] {opacity:0;visibility:hidden;}html:not(.pg-ia-no-preview) [data-pg-ia-show="desktop"] {opacity:1;visibility:visible;display:block;}}';style.innerHTML=pgcss;document.querySelector('head').appendChild(style);}}catch(e){console&&console.log(e);}})()</script>
+    </head>     
+    <body> 
+        <form id="form_password"> 
+            <div class="output-wrapper"> 
+                <label for="password" class="output-label">Password</label>                 
+                <output type="text" id="password" value="" readonly></output>                 
+                <button type="button" id="copy" class="button-copy" data-pg-ia> 
+                    <img src="icons/icon-copy.png"/> 
+                </button>                 
+            </div>             
+            <div class="password-container"> 
+                <label for="length" id="label_length">Password length:</label>                 
+                <input type="number" id="length" value="16" min="8" max="128"/> 
+            </div>             
+            <div class="checkbox-wrapper"> 
+                <div> 
+                    <input type="checkbox" id="low_character" checked="checked"/> 
+                    <label for="low_character" id="label_lowercase">Lowercase characters (a-z)</label>                     
+                </div>                 
+                <div> 
+                    <input type="checkbox" id="upper_character" checked="checked"/> 
+                    <label for="upper_character" id="label_uppercase">Uppercase characters (A-Z)</label>                     
+                </div>                 
+                <div> 
+                    <input type="checkbox" id="number" checked="checked"/> 
+                    <label for="number" id="label_number">Numbers (0-9)</label>                     
+                </div>                 
+                <div> 
+                    <input type="checkbox" id="symbol" checked="checked"/> 
+                    <label for="symbol" id="label_symbols">Symbols</label>                     
+                    <input type="text" id="symbol_val" value="!#$%&=~/*-+"/> 
+                </div>                 
+            </div>             
+            <button type="button" id="generate">Generate</button>                          
+
+            <div class="password-container"> 
+                <label for="mode" id="label_mode">Password mode:</label>                 
+                <select id="mode"> 
+                    <option value="random">Random</option>                     
+                    <option value="meaningful">Words include</option>                     
+                </select>                 
+            </div>
+        </form>         
+        <script src="pgia/lib/pgia.js"></script>
+    </body>     
+</html>
